@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE taglib
+        PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+        "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib>
+  <tlib-version>1.0</tlib-version>
+  <jsp-version>1.2</jsp-version>
+  <short-name>anything</short-name>
+  <uri>http://tomcat.apache.org/example-taglib</uri>
+  <description>
+       tag library
+  </description>
+  <tag>
+    <name>UID</name>
+    <tag-class>com.customtags.UIDTagSupport</tag-class>
+      </tag>
+   <tag>
+    <name>formId</name>
+    <tag-class>com.customtags.FormIdTagSupport</tag-class>
+ </tag>
+ <tag>
+  <name>formResubmitted</name>
+  <tag-class>com.customtags.FormResubmittedTagSupport</tag-class>
+</tag>
+<tag>
+<name>sessionDoesNotContain</name>
+<tag-class>com.customtags.SessionDoesNotContainTagSupport</tag-class>
+<attribute>
+<name>key</name>
+<required>false</required>
+<rtexprvalue>false</rtexprvalue>
+<type>java.lang.String</type>
+<name>value</name>
+<required>false</required>
+<rtexprvalue>true</rtexprvalue>
+<type>java.lang.Object</type>
+</attribute>
+</tag>
+<tag>
+<name>loop</name>
+<tag-class>com.customtags.LoopTagSupport</tag-class>
+<attribute>
+<name>startAt</name>
+<required>true</required>
+<rtexprvalue>true</rtexprvalue>
+<type>java.lang.Integer</type>
+</attribute>
+<attribute>
+<name>endAt</name>
+<required>true</required>
+<rtexprvalue>true</rtexprvalue>
+<type>java.lang.Integer</type>
+</attribute>
+<tei-class>com.customtags.LoopTagExtraInfo</tei-class>
+</tag>
+<tag>
+<name>employee</name>
+<tag-class>com.views.EmployeeTagSupport</tag-class>
+<attribute>
+<name>name</name>
+<required>true</required>
+<rtexprvalue>false</rtexprvalue>
+<type>java.lang.String</type>
+</attribute>
+<tei-class>com.views.EmployeeTagExtraInfo</tei-class>
+</tag>
+<tag>
+<name>page</name>
+<tag-class>com.customtags.PageTagSupport</tag-class>
+<attribute>
+<name>name</name>
+<required>true</required>
+<rtexprvalue>false</rtexprvalue>
+<type>java.lang.String</type>
+</attribute>
+<attribute>
+<name>pageSize</name>
+<required>true</required>
+<rtexprvalue>true</rtexprvalue>
+<type>java.lang.Integer</type>
+</attribute>
+<attribute>
+<name>pageNumber</name>
+<required>true</required>
+<rtexprvalue>true</rtexprvalue>
+<type>java.lang.Integer</type>
+</attribute>
+<attribute>
+<name>for</name>
+<required>true</required>
+<rtexprvalue>false</rtexprvalue>
+<type>java.lang.String</type>
+</attribute>
+</tag>
+<tag>
+<name>pageRow</name>
+<tag-class>com.customtags.PageRowTagSupport</tag-class>
+<attribute>
+<name>of</name>
+<required>true</required>
+<rtexprvalue>false</rtexprvalue>
+<type>java.lang.String</type>
+</attribute>
+<attribute>
+<name>beanName</name>
+<required>true</required>
+<rtexprvalue>false</rtexprvalue>
+<type>java.lang.String</type>
+</attribute>
+</tag>
+<tag>
+<name>pageNumber</name>
+<tag-class>com.customtags.PageNumberTagSupport</tag-class>
+<attribute>
+<name>of</name>
+<required>true</required>
+<rtexprvalue>true</rtexprvalue>
+<type>java.lang.String</type>
+</attribute>
+<attribute>
+<name>nameOfPageNumber</name>
+<required>true</required>
+<rtexprvalue>true</rtexprvalue>
+<type>java.lang.String</type>
+</attribute>
+</tag>
+</taglib>
